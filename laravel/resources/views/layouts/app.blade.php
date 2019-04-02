@@ -15,11 +15,11 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="{{asset("toastr.css")}}">
+    <link rel="stylesheet" href="{{asset('toastr.scss')}}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
     {{--Стили верстки--}}
 
 
@@ -85,16 +85,13 @@
                 </div>
         </div>
 @include('layouts.footer')
-
 <script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
 <scrpit src="http://code.jquery.com/jquery.js"></scrpit>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/jquery.appear.min.js')}}"></script>
 <script src="{{asset('js/jquery.incremental-counter.js')}}"></script>
 <script src="{{asset('js/script.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<script>
-    $('#tag_list').select2();
-</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 </body>
 </html>

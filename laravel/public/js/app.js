@@ -1795,6 +1795,7 @@ __webpack_require__.r(__webpack_exports__);
       this.flag = true;
     },
     repost: function repost() {
+      toastr.success("Reposted");
       axios.get("/post/repost/" + this.post_id).then(responce = "ok" ? this.flag_rep = false : undefined);
     }
   }
@@ -1833,6 +1834,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     user: Object,
@@ -1840,13 +1843,13 @@ __webpack_require__.r(__webpack_exports__);
     path: String
   },
   methods: {
-    subscribe: function subscribe() {
-      axios.get("/users/subscribe/" + this.user.id).then(responce = "ok" ? this.flag = true : undefined);
-      toastr.info("hello");
+    subscribe: function subscribe(responce) {
+      toastr.success("Cool subcribe 😜");
+      axios.get("/users/subscribe/" + this.user.id).then(response = "ok" ? this.flag = true : undefined);
     },
-    unsubscribe: function unsubscribe() {
-      axios.get("/users/unsubscribe/" + this.user.id).then(responce = "ok" ? this.flag = false : undefined);
-      toastr.info("hello");
+    unsubscribe: function unsubscribe(responce) {
+      toastr.error("Return back 🥺");
+      axios.get("/users/unsubscribe/" + this.user.id).then(response = "ok" ? this.flag = false : undefined);
     }
   },
   mounted: function mounted() {}
@@ -36981,7 +36984,6 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-info pull-right",
-                    attrs: { v: "" },
                     on: { click: _vm.subscribe }
                   },
                   [_vm._v("Подписаться")]
@@ -49161,7 +49163,6 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.toastr = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module 'toastr'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your

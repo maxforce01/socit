@@ -35,6 +35,7 @@
                 this.flag = true;
             },
             repost:function () {
+                toastr.success("Reposted");
                 axios
                     .get("/post/repost/" + this.post_id)
                     .then(responce = "ok" ? this.flag_rep = false : this.flag_rep = true);
