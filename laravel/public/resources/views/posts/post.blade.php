@@ -13,7 +13,7 @@
                         <p class="text-muted">Published {{$post->created_at->diffforHumans()}}</p>
                     </div>
                     @if($post->author_id == \Illuminate\Support\Facades\Auth::id())
-                        <a role="button" href="{{route('post.delete',$post->id)}}" class="delete-post"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        <a role="button" href="{{route('post.delete',$post->id)}}">Удалить<i class="fa fa-times" aria-hidden="true"></i></a>
                     @endif
                     @if(!empty($post->image))
                         <img src="{{asset('/storage/'.$post->image)}}" alt="post-image" class="img-responsive post-image" />
@@ -50,12 +50,12 @@
                             <h4 class="grey-spec">{{$comment->title}}</h4>
                         </div>
                         @if($comment->user->id == \Illuminate\Support\Facades\Auth::id())
-                            <a role="button" href="{{route('comments',$comment->id)}}" class="delete-coment"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            <a role="button" href="{{route('comments',$comment->id)}}">Удалить<i class="fa fa-times" aria-hidden="true"></i></a>
                         @endif
                         <p>({{ $comment->created_at->diffforHumans() }})</p>
                     @endforeach
                     <form class="post-comment" action="{{route('comment')}}" method="post">
-                        <textfield></textfield>
+                        <input type="text"  id="comment"  name="title" class="form-control" placeholder="Post a comment">
                         <input type="hidden" name="user_id" value="{{Auth::id()}}">
                         <input type="hidden" name="post_id" value="{{$post->id}}">
                         <button type="submit" class="btn btn-primary btn-xs"><i class="fa fa-check" aria-hidden="true"></i></button>

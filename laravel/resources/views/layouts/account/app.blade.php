@@ -20,14 +20,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
-
-    {{--Emoji--}}
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-
-    <!-- Stylesheets
-    ================================================= -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}" />
@@ -73,27 +65,50 @@
     </style>
 </head>
 <body>
+<div>
 @include('layouts.header')
-        <div id="app">
-                <div id="page-contents">
-                    <div class="container">
-                        <div class="row">
-                            @include('layouts.left_bar')
-                            <div class="col-md-7">
-                                @yield('content')
+    <div id="app">
+        <div class="container">
+            @include('layouts.account.timeline')
+            <div id="page-contents">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-7">
+                        <div class="create-post">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-7">
+                                    <div class="form-group">
+                                        <img src="http://placehold.it/300x300" alt="" class="profile-photo-md" />
+                                        <textarea name="texts" id="exampleTextarea" cols="30" rows="1" class="form-control" placeholder="Write what you wish"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 col-sm-5">
+                                    <div class="tools">
+                                        <ul class="publishing-tools list-inline">
+                                            <li><a href="#"><i class="ion-compose"></i></a></li>
+                                            <li><a href="#"><i class="ion-images"></i></a></li>
+                                            <li><a href="#"><i class="ion-ios-videocam"></i></a></li>
+                                            <li><a href="#"><i class="ion-map"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-primary pull-right">Publish</button>
+                                    </div>
+                                </div>
                             </div>
-                            @include('layouts.right_bar')
                         </div>
+                        @yield('content')
                     </div>
+                     @include('layouts.right_bar')
                 </div>
+            </div>
         </div>
+    </div>
 @include('layouts.footer')
-<script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
-<scrpit src="http://code.jquery.com/jquery.js"></scrpit>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/jquery.appear.min.js')}}"></script>
-<script src="{{asset('js/jquery.incremental-counter.js')}}"></script>
-<script src="{{asset('js/script.js')}}"></script>
+</div>
+<script type="text/javascript" src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.appear.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.incremental-counter.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/script.js')}}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 </body>

@@ -23,6 +23,12 @@ class UserController extends Controller
         }
         return view('users.index',['users'=>$reponce]);
     }
+    public function subscriptionsUser($id)
+    {
+        $user = User::find($id);
+        $responce = $user->subscriptions;
+        return view('users.index',['users'=>$responce]);
+    }
     public function subscribe($id)
     {
         $user = User::find($id);

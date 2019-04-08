@@ -12,22 +12,6 @@ class PostController extends Controller
 {
     public function index($slug)
     {
-        $lesson = Category::where('slug','lessons')->first();
-        $lessons_childs = Category::where('parent_id',$lesson->id)->get();
-        if(!empty($lessons_childs)) {
-            $lessons_childs->push($lesson);
-        }
-        $help = Category::where('slug','help')->first();
-        $help_childs = Category::where('parent_id',$help->id)->get();
-        if(!empty($help_childs)) {
-            $help_childs->push($help);
-        }
-
-        $news = Category::where('slug','news')->first();
-        $news_childs = Category::where('parent_id',$news->id)->get();
-        if(!empty($news_childs)) {
-            $news_childs->push($news);
-        }
         $categoty = Category::where('slug',$slug)->first();
         $childs = Category::where('parent_id',$categoty->id)->get();
         $posts = collect();
@@ -43,30 +27,13 @@ class PostController extends Controller
         else{
             $posts = $categoty->posts;
         }
-        return view('posts.index',['posts'=>$posts->sortByDesc('created_at'),'news'=>$news_childs,'lessons'=>$lessons_childs,'helps'=>$help_childs]);
+        return view('posts.index',['posts'=>$posts->sortByDesc('created_at')]);
     }
 
     public function home_index()
     {
-
-        $lesson = Category::where('slug','lessons')->first();
-        $lessons_childs = Category::where('parent_id',$lesson->id)->get();
-        if(!empty($lessons_childs)) {
-            $lessons_childs->push($lesson);
-        }
-        $help = Category::where('slug','help')->first();
-        $help_childs = Category::where('parent_id',$help->id)->get();
-        if(!empty($help_childs)) {
-            $help_childs->push($help);
-        }
-
-        $news = Category::where('slug','news')->first();
-        $news_childs = Category::where('parent_id',$news->id)->get();
-        if(!empty($news_childs)) {
-            $news_childs->push($news);
-        }
         $posts = Post::all();
-        return view('posts.index',['posts'=>$posts->sortByDesc('created_at'),'news'=>$news_childs,'lessons'=>$lessons_childs,'helps'=>$help_childs]);
+        return view('posts.index',['posts'=>$posts->sortByDesc('created_at')]);
     }
     public function post($slug)
     {
@@ -81,24 +48,8 @@ class PostController extends Controller
 
     public function tag($tag_id)
     {
-        $lesson = Category::where('slug','lessons')->first();
-        $lessons_childs = Category::where('parent_id',$lesson->id)->get();
-        if(!empty($lessons_childs)) {
-            $lessons_childs->push($lesson);
-        }
-        $help = Category::where('slug','help')->first();
-        $help_childs = Category::where('parent_id',$help->id)->get();
-        if(!empty($help_childs)) {
-            $help_childs->push($help);
-        }
-
-        $news = Category::where('slug','news')->first();
-        $news_childs = Category::where('parent_id',$news->id)->get();
-        if(!empty($news_childs)) {
-            $news_childs->push($news);
-        }
         $tag = Tag::find($tag_id);
-        return view('posts.index',['posts'=>$tag->posts->sortByDesc('created_at'),'news'=>$news_childs,'lessons'=>$lessons_childs,'helps'=>$help_childs]);
+        return view('posts.index',['posts'=>$tag->posts->sortByDesc('created_at')]);
     }
 
 }

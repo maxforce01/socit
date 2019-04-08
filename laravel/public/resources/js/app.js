@@ -19,9 +19,7 @@ window.Vue = require('vue');
 
 Vue.component('likes', require('./components/LikeComponent.vue').default);
 Vue.component('user', require('./components/UserComponent.vue').default);
-Vue.component('subscribe', require('./components/Subscribe.vue').default);
-Vue.component('textarea2', require('./components/Emoji.vue').default);
-Vue.component('textfield', require('./components/textEmoji.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -31,6 +29,5 @@ Vue.component('textfield', require('./components/textEmoji.vue').default);
 const app = new Vue({
     el: '#app',
 });
-
 
 

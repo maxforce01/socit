@@ -26,7 +26,7 @@ Route::get('/comments/{id}', 'CommentController@delete')->name('comments');
 Route::get('/post/getlike/{post_id}','EventController@getLike',['middleware' => 'auth',])->name('post.getlike');
 Route::get('/post/removelike/{post_id}','EventController@removeLike',['middleware' => 'auth',])->name('post.removelike');
 Route::get('/post/repost/{post_id}','EventController@repost',['middleware' => 'auth',]);
-
+Route::get('/post/unrepost/{post_id}','EventController@unrepost',['middleware' => 'auth',])->name('unrepost');
 
 
 /*Posts*/
@@ -42,4 +42,8 @@ Route::get('/users/','UserController@index')->name('users');
 Route::get('/users/subscribe/{id}','UserController@subscribe');
 Route::get('/users/unsubscribe/{id}','UserController@unsubscribe');
 Route::get('/subscriptions/','UserController@subscriptions')->name('subscriptions');
+Route::get('/subscriptions/{id}','UserController@subscriptionsUser')->name('subscriptions.user');
 
+/*Account*/
+Route::get('/account/{id}','AccountController@userAccount');
+Route::get('/account/','AccountController@myAccount');

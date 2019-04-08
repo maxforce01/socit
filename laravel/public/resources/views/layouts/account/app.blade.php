@@ -20,13 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
-
-    {{--Emoji--}}
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-
-    <!-- Stylesheets
+<!-- Stylesheets
     ================================================= -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
@@ -74,19 +68,19 @@
 </head>
 <body>
 @include('layouts.header')
-        <div id="app">
-                <div id="page-contents">
-                    <div class="container">
-                        <div class="row">
-                            @include('layouts.left_bar')
-                            <div class="col-md-7">
-                                @yield('content')
-                            </div>
-                            @include('layouts.right_bar')
-                        </div>
-                    </div>
+<div id="app">
+    <div id="page-contents">
+        <div class="container">
+            <div class="row">
+                @include('layouts.left_bar')
+                <div class="col-md-7">
+                    @yield('content')
                 </div>
+                @include('layouts.right_bar')
+            </div>
         </div>
+    </div>
+</div>
 @include('layouts.footer')
 <script src="{{asset('js/jquery-3.1.1.min.js')}}"></script>
 <scrpit src="http://code.jquery.com/jquery.js"></scrpit>

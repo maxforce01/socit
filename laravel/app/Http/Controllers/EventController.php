@@ -33,4 +33,9 @@ class EventController extends Controller
         Auth::user()->repostPosts()->attach($post);
         return response()->json("ok");
     }
+    public function unrepost($post_id){
+        $post = Post::find($post_id);
+        Auth::user()->repostPosts()->detach($post);
+        return redirect()->back();
+    }
 }

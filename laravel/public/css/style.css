@@ -1201,7 +1201,16 @@ ul.online-users li span.online-dot{
   right: 0;
   top: 0;
 }
-
+.delete-post{
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+}
+.delete-coment{
+    position: relative;
+    left: 80%;
+    bottom: 100%;
+}
 .post-content .post-container .post-detail .post-comment {
   display: inline-flex;
   margin: 10px auto;
@@ -1478,7 +1487,7 @@ ul.online-users li span.online-dot{
   ==================================================*/
 
 .timeline-cover{
-  background: url("http://placehold.it/1030x360") no-repeat;
+  background: url("http://localhost:8000/storage/settings/March2019/hdn0TkwJIxc682wa8s1H.png") no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 360px;

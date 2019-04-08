@@ -20,10 +20,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
-
-    {{--Emoji--}}
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="laravel/node_modules/emojione/extras/css/emojione.min.css">
+    <script type="text/javascript" src="laravel/node_modules/emojione/lib/js/emojione.min.js"></script>
+    {{--Стили верстки--}}
 
 
     <!-- Stylesheets
@@ -96,5 +95,11 @@
 <script src="{{asset('js/script.js')}}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<textarea id="example1"></textarea>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#comment").emojioneArea();
+    });
+</script>
 </body>
 </html>
