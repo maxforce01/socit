@@ -84,7 +84,7 @@ class User extends \TCG\Voyager\Models\User
     }
     public function isRepost(Post $this_post)
     {
-        foreach (Auth::user()->repostPosts as $post)
+        foreach ($this->repostPosts as $post)
         {
             if($this_post->id == $post->id)
                 return true;
@@ -92,4 +92,12 @@ class User extends \TCG\Voyager\Models\User
         return false;
     }
 
+    public function photos()
+    {
+        return $this->hasMany('App\Photo','user_id');
+    }
+    public function videos()
+    {
+        return $this->hasMany('App\Video','user_id');
+    }
 }

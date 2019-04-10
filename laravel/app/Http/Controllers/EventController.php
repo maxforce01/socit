@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -37,5 +38,17 @@ class EventController extends Controller
         $post = Post::find($post_id);
         Auth::user()->repostPosts()->detach($post);
         return redirect()->back();
+    }
+    public function child($id)
+    {
+        return response()->json(Category::where('parent_id',$id)->get());
+    }
+    public function parent()
+    {
+        return response()->json(Category::where('parent_id',null)->get());
+    }
+    public function tags()
+    {
+        return response()->json(Tag::all());
     }
 }

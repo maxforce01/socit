@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}" />
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -74,27 +74,6 @@
                 <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-7">
-                        <div class="create-post">
-                            <div class="row">
-                                <div class="col-md-7 col-sm-7">
-                                    <div class="form-group">
-                                        <img src="http://placehold.it/300x300" alt="" class="profile-photo-md" />
-                                        <textarea name="texts" id="exampleTextarea" cols="30" rows="1" class="form-control" placeholder="Write what you wish"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-5 col-sm-5">
-                                    <div class="tools">
-                                        <ul class="publishing-tools list-inline">
-                                            <li><a href="#"><i class="ion-compose"></i></a></li>
-                                            <li><a href="#"><i class="ion-images"></i></a></li>
-                                            <li><a href="#"><i class="ion-ios-videocam"></i></a></li>
-                                            <li><a href="#"><i class="ion-map"></i></a></li>
-                                        </ul>
-                                        <button class="btn btn-primary pull-right">Publish</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         @yield('content')
                     </div>
                      @include('layouts.right_bar')
@@ -109,7 +88,32 @@
 <script type="text/javascript" src="{{asset('js/jquery.appear.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.incremental-counter.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script>
+    function reload_script()
+    {
+        var selectedVal = $(".parent :selected").val();
+        $.ajax({
+            url: "/categories/child/" + selectedVal,
+            type: "get",
+            success: function (data, textStatus, jqXHR) {
+                opts = [];
+                for (var i = 0; i < data.length; i++) {
+                    opts += "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
+                }
+                $('.child').html(opts);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert('Error: ' + textStatus);
+            }
+        });
+    }
+</script>
+<script>
+    reload_script();
+</script>
 </body>
 </html>

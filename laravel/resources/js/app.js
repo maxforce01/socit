@@ -5,7 +5,10 @@
  */
 require('./bootstrap');
 window.Vue = require('vue');
-
+import moment from 'vue-moment'
+import Vue from 'vue'
+import vSelect from 'vue-select'
+import VueTrix from 'vue-trix'
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -21,7 +24,12 @@ Vue.component('likes', require('./components/LikeComponent.vue').default);
 Vue.component('user', require('./components/UserComponent.vue').default);
 Vue.component('subscribe', require('./components/Subscribe.vue').default);
 Vue.component('textarea2', require('./components/Emoji.vue').default);
-Vue.component('textfield', require('./components/textEmoji.vue').default);
+Vue.component('comments', require('./components/textEmoji.vue').default);
+Vue.component('comment', require('./components/Comment.vue').default);
+Vue.component('select2', vSelect);
+Vue.component('richtextbox', VueTrix);
+Vue.component('post-form', require('./components/PostForm.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

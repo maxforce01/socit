@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Photo;
 use App\Post;
 use App\Tag;
+use App\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,4 +54,42 @@ class PostController extends Controller
         return view('posts.index',['posts'=>$tag->posts->sortByDesc('created_at')]);
     }
 
+    /**
+     * @param Request $request
+     */
+    public function store(Request $request)
+    {
+        $post = new Post;
+        $post->title = $request->title;
+        $post->excerpt = $request->excerpt;
+        $post->body = $request->body;
+        $post->category_id = $request->category_id;
+        $post->author_id = Auth::user()->id;
+        $post->status = 'published';
+        $post->setSlugAttribute();
+        if ($request->file('image') == null) {
+            $post->image = "";
+        }else{
+            $post->image = $request->file('image')->store('uploads','public');
+            $photo = new Photo;
+            $photo->photo = $post->image;
+            $photo->user_id = Auth::user()->id;
+            $photo->save();
+        }
+        if ($request->file('video') == null) {
+            $post->video = "";
+        }else{
+            $post->video = $request->file('video')->store('uploads', 'public');
+            $video = new Video;
+            $video->video = $post->video;
+            $video->user_id = Auth::user()->id;
+            $video->save();
+        }
+        $post->save();
+        foreach ($request->tags as $tag)
+        {
+            $post->tags()->attach($tag);
+        }
+        return redirect()->back();
+    }
 }

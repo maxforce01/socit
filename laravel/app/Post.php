@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Str;
 class Post extends \TCG\Voyager\Models\Post
 {
     public function tags()
@@ -15,10 +15,23 @@ class Post extends \TCG\Voyager\Models\Post
 
         return $this->morphMany('App\Likeable','likeable');
     }
+
+    public function setUserNameAttribute($value)
+    {
+        $this->attributes['user_name'] = strtolower($value);
+    }
+    public function setUserAvatarAttribute($value)
+    {
+        $this->attributes['user_avatar'] = strtolower($value);
+    }
+    public function setSlugAttribute(){
+        $this->attributes['slug'] = Str::slug(mb_substr($this->title,0,40)."-".\Carbon\Carbon::now()->format('Y-m-d'));
+    }
     public function comments()
     {
         return $this->hasMany('App\Comment','post_id');
     }
+
     public function last_comments()
     {
         $arr = $this->hasMany('App\Comment','post_id')->orderBy('created_at','desc')->limit(3);
@@ -33,9 +46,7 @@ class Post extends \TCG\Voyager\Models\Post
     {
         $lessonn = Category::where('slug','lessons')->first();
         $lessons = Category::where('parent_id',$lessonn->id)->get();
-        if(!empty($lessons)) {
-            $lessons->push($lessonn);
-        }
+        $lessons->push($lessonn);
         foreach($lessons as $lesson) {
             if ($this->category_id == $lesson->id)
             {
@@ -48,9 +59,7 @@ class Post extends \TCG\Voyager\Models\Post
     {
         $neww = Category::where('slug','news')->first();
         $news = Category::where('parent_id',$neww->id)->get();
-        if(!empty($newss)) {
-            $news->push($neww);
-        }
+        $news->push($neww);
         foreach($news as $new) {
             if ($this->category_id == $new->id)
             {
@@ -63,9 +72,7 @@ class Post extends \TCG\Voyager\Models\Post
     {
         $helpp = Category::where('slug','help')->first();
         $helps = Category::where('parent_id',$helpp->id)->get();
-        if(!empty($helps)) {
-            $helps->push($helpp);
-        }
+        $helps->push($helpp);
         foreach($helps as $help) {
             if ($this->category_id == $help->id)
             {

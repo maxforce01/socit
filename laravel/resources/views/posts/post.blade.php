@@ -32,7 +32,7 @@
                     @if($post->video!='[]')
                         <div class="line-divider"></div>
                         <video width="320" height="240" controls>
-                            <source src="{{asset('/storage/'.$post->video_path($post->video))}}" type="video/mp4">
+                            <source src="{{asset('/storage/'.$post->video_path())}}" type="video/mp4">
                         </video>
                     @endif
                     @if(!empty($post->tags))
@@ -43,25 +43,9 @@
                         </ul>
                     @endif
                     <div class="line-divider"></div>
-                    @foreach($post->comments as $comment)
-                        <div class="post-comment">
-                            <img src="{{asset('/storage/'.$comment->user->avatar)}}" alt="" class="profile-photo-sm" />
-                            <h4><a href="#" class="profile-link">{{$comment->user->name}}:</a></h4>
-                            <h4 class="grey-spec">{{$comment->title}}</h4>
-                        </div>
-                        @if($comment->user->id == \Illuminate\Support\Facades\Auth::id())
-                            <a role="button" href="{{route('comments',$comment->id)}}" class="delete-coment"><i class="fa fa-times" aria-hidden="true"></i></a>
-                        @endif
-                        <p>({{ $comment->created_at->diffforHumans() }})</p>
-                    @endforeach
-                    <form class="post-comment" action="{{route('comment')}}" method="post">
-                        <textfield></textfield>
-                        <input type="hidden" name="user_id" value="{{Auth::id()}}">
-                        <input type="hidden" name="post_id" value="{{$post->id}}">
-                        <button type="submit" class="btn btn-primary btn-xs"><i class="fa fa-check" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    <comments :coments="{{$post->comments}}" :auth="{{\Illuminate\Support\Facades\Auth::user()->id}}" :post_id="{{$post->id}}"></comments>
+    </div>
+</div>
+</div>
 
 @stop

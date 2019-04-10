@@ -94,6 +94,7 @@
 <script src="{{asset('js/jquery.appear.min.js')}}"></script>
 <script src="{{asset('js/jquery.incremental-counter.js')}}"></script>
 <script src="{{asset('js/script.js')}}"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 </body>

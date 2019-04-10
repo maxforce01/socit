@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+
     public function index()
     {
         return view('users.index',['users'=>User::all()]);
@@ -40,5 +41,10 @@ class UserController extends Controller
         $user = User::find($id);
         Auth::user()->subscriptions()->detach($user);
         return response()->json("ok");
+    }
+    public function thisUser($id)
+    {
+        $user = User::find($id);
+        return response()->json($user);
     }
 }

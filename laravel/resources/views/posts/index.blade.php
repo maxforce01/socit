@@ -99,11 +99,11 @@
                                 @endif
                             </a>
                             <div class="line-divider"></div>
-                            @if(\Illuminate\Support\Facades\Auth::user()->hasLikedPost($post))
+                                @if(\Illuminate\Support\Facades\Auth::user()->hasLikedPost($post))
                                     <likes :counter= "{{$post->likes->count()}}" :post_id="{{$post->id}}" @if(\Illuminate\Support\Facades\Auth::user()->id != $post->author_id && !\Illuminate\Support\Facades\Auth::user()->isRepost($post)) :flag_rep="true" @else :flag_rep="false" @endif :flag="true" ></likes>
-                            @else
+                                @else
                                     <likes :counter= "{{$post->likes->count()}}" :post_id="{{$post->id}}" @if(\Illuminate\Support\Facades\Auth::user()->id != $post->author_id && !\Illuminate\Support\Facades\Auth::user()->isRepost($post)) :flag_rep="true" @else :flag_rep="false" @endif :flag="true" ></likes>
-                            @endif
+                                @endif
                             <a href="{{url('/post/'.$post->slug)}}">
                                 <div class="post-text">
                                     <p>{!!$post->body!!}<i class="em em-anguished"></i> <i class="em em-anguished"></i> <i class="em em-anguished"></i></p>
@@ -117,24 +117,7 @@
                                 </ul>
                                 <div class="line-divider"></div>
                             @endif
-
-                            @foreach($post->last_comments as $comment)
-                                <div class="post-comment">
-                                    <img src="{{asset('/storage/'.$comment->user->avatar)}}" alt="" class="profile-photo-sm" />
-                                    <h4><a href="#" class="profile-link">{{$comment->user->name}}:</a></h4>
-                                    <h4 class="grey-spec">{{$comment->title}}</h4>
-                                </div>
-                                @if($comment->user->id == \Illuminate\Support\Facades\Auth::id())
-                                    <a role="button" href="{{route('comments',$comment->id)}}" class="delete-coment"><i class="fa fa-times" aria-hidden="true"></i></a>
-                                @endif
-                                <p>({{ $comment->created_at->diffforHumans() }})</p>
-                            @endforeach
-                            <form class="post-comment" action="{{route('comment')}}" method="post">
-                                <textfield></textfield>
-                                <input type="hidden" name="user_id" value="{{Auth::id()}}">
-                                <input type="hidden" name="post_id" value="{{$post->id}}">
-                                <button type="submit" class="btn btn-primary btn-xs"><i class="fa fa-check" aria-hidden="true"></i></button>
-                            </form>
+                                <comments :coments="{{$post->last_comments}}" :auth="{{\Illuminate\Support\Facades\Auth::user()->id}}" :post_id="{{$post->id}}"></comments>
                         </div>
                     </div>
                 </div>

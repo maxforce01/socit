@@ -1208,18 +1208,19 @@ ul.online-users li span.online-dot{
 }
 .delete-coment{
     position: relative;
-    left: 80%;
+    right: 0;
     bottom: 100%;
+    background-color: transparent;
+    color: #27aae1;
+    border: none;
 }
 .post-content .post-container .post-detail .post-comment {
   display: inline-flex;
   margin: 10px auto;
-  width: 100%;
 }
 .post-content .post-container .post-detail .post-comment img.profile-photo-sm{
   margin-right: 10px;
 }
-
 .post-content .post-container .post-detail .post-comment .form-control{
   height: 30px;
   border: 1px solid #ccc;

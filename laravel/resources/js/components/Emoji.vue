@@ -85,6 +85,7 @@
     }
     .textarea {
         width: 100%;
+        margin-right: 100px;
         outline: none;
         padding: 10px 28px 10px 10px;
         font-size: 15px;
