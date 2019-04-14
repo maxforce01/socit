@@ -41,9 +41,9 @@
                             </select>
                             <br>
                             <label>Каритнка</label>
-                            <input name="image" type="file">
+                            <input name="image" class="form-control" type="file">
                             <label>Видео</label>
-                            <input name="video" type="file">
+                            <input name="video" class="form-control" type="file">
                             <br>
                             <div class="line-divider"></div>
                             <button  type="submit" class="btn btn-success btn-md">Success</button>

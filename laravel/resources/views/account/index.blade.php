@@ -14,7 +14,7 @@
                     <img src="{{asset('/storage/'.$user->avatar)}}" alt="user" class="profile-photo-md pull-left" />
                     <div class="post-detail">
                         <div class="user-info">
-                           <h5><a href="#" class="profile-link">{{$user->name}}</a>  @if($user->isRepost($post))  <span class="following">reposted by {{$post->authorId['name']}}</span></h5> @else<span class="following">following</span></h5> @endif
+                           <h5><a href="{{route('account',$user->id)}}" class="profile-link">{{$user->name}}</a>  @if($user->isRepost($post))  <span class="following">reposted by {{$post->authorId['name']}}</span></h5> @else<span class="following">following</span></h5> @endif
                             <p class="text-muted">Published {{$post->created_at->diffforHumans()}}</p>
                         </div>
                         @if($user->id == \Illuminate\Support\Facades\Auth::id())
@@ -62,7 +62,7 @@
                     <img src="{{asset('/storage/'.$user->avatar)}}" alt="user" class="profile-photo-md pull-left" />
                     <div class="post-detail">
                         <div class="user-info">
-                            <h5><a href="#" class="profile-link">{{$user->name}}</a> @if($user->isRepost($post))  <span class="following">reposted by {{$post->authorId['name']}}</span></h5> @else<span class="following">following</span></h5> @endif
+                            <h5><a href="{{route('account',$user->id)}}" class="profile-link">{{$user->name}}</a> @if($user->isRepost($post))  <span class="following">reposted by {{$post->authorId['name']}}</span></h5> @else<span class="following">following</span></h5> @endif
                             <p class="text-muted">Published {{$post->created_at->diffforHumans()}}</p>
                         </div>
                         @if($user->id == \Illuminate\Support\Facades\Auth::id())
@@ -104,7 +104,7 @@
                             <a role="button" href="{{route('unrepost',$post->id)}}" class="delete-post"><i class="fa fa-times" aria-hidden="true"></i></a>
                         @endif
                             <div class="user-info">
-                                <h5><a href="#" class="profile-link">{{$user->name}}</a> @if($user->isRepost($post))  <span class="following">reposted by {{$post->authorId['name']}}</span></h5> @else<span class="following">following</span></h5> @endif
+                                <h5><a href="{{route('account',$user->id)}}" class="profile-link">{{$user->name}}</a> @if($user->isRepost($post))  <span class="following">reposted by {{$post->authorId['name']}}</span></h5> @else<span class="following">following</span></h5> @endif
                                 <p class="text-muted">Published {{$post->created_at->diffforHumans()}}</p>
                             </div>
                         <a href="{{url('/post/'.$post->slug)}}">

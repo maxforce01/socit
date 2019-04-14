@@ -13,9 +13,10 @@
                 </div>
                 <div class="col-md-9">
                     <ul class="list-inline profile-menu">
-                        <li><a href="timeline.html" class="active">Timeline</a></li>
+                        <li><a href="{{route('user',$user->id)}}" class="active">Лента</a></li>
                         <li><a href="timeline-about.html">About</a></li>
-                        <li><a href="timeline-album.html">Album</a></li>
+                        <li><a href="{{route('gallery',$user->id)}}">Альбом</a></li>
+                        <li><a href="{{route('videos',$user->id)}}">Видео</a></li>
                         <li><a href="{{route('subscriptions.user',$user->id)}}">Подписчики</a></li>
                     </ul>
                     <ul class="follow-me list-inline">
@@ -42,10 +43,11 @@
             </div>
             <div class="mobile-menu">
                 <ul class="list-inline">
-                    <li><a href="timline.html" class="active">Timeline</a></li>
-                    <li><a href="timeline-about.html">About</a></li>
-                    <li><a href="timeline-album.html">Album</a></li>
-                    <li><a href="timeline-friends.html">Friends</a></li>
+                        <li><a href="{{route('user',$user->id)}}" class="active">Лента</a></li>
+                        <li><a href="timeline-about.html">About</a></li>
+                        <li><a href="{{route('gallery',$user->id)}}">Альбом</a></li>
+                        <li><a href="{{route('videos',$user->id)}}">Видео</a></li>
+                        <li><a href="{{route('subscriptions.user',$user->id)}}">Подписчики</a></li>
                 </ul>
                 @if(\Illuminate\Support\Facades\Auth::user()->id != $user->id)
                 @if(!\Illuminate\Support\Facades\Auth::user()->isSubscribe($user))
@@ -57,4 +59,5 @@
             </div>
         </div>
     </div>
+</div>
 

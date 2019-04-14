@@ -2,40 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b0df22e-fd7c-4bd7-8696-2d46e821d01c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/public/js/jquery.maskedinput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/js/pretty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/js/components/Comment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/js/components/PostForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/account/photos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/account/videos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/images/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/partials/add-photo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/partials/add-video.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/components/Emoji.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/components/Emoji.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/js/components/textEmoji.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/components/textEmoji.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/components/Comment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/components/Comment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/js/components/UserComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/js/components/UserComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/account/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/account/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/images/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/images/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/account/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/account/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/account/timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/account/timeline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/left_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/left_bar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/partials/add-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/partials/add-post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/posts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/resources/views/posts/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/posts/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +30,7 @@
     <pharConfigPath>$PROJECT_DIR$/laravel/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,24 +38,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/RegisterController.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/left_bar.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/laravel/public/js/app.js" />
         <option value="$PROJECT_DIR$/laravel/public/css/toastr.css" />
         <option value="$PROJECT_DIR$/laravel/public/toastr.scss" />
         <option value="$PROJECT_DIR$/laravel/public/toastr.css" />
-        <option value="$PROJECT_DIR$/laravel/resources/js/components/UserComponent.vue" />
         <option value="$PROJECT_DIR$/laravel/public/lib/js/emoji-picker.coffee" />
         <option value="$PROJECT_DIR$/../HTML-Package/HTML/timeline.html" />
         <option value="$PROJECT_DIR$/laravel/resources/js/components/Subscribe.vue" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/account/timeline.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/js/components/LikeComponent.vue" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/laravel/public/js/pretty.js" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/js/components/Emoji.vue" />
-        <option value="$PROJECT_DIR$/laravel/resources/js/components/Comment.vue" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa13256.22777/index.html" />
         <option value="$PROJECT_DIR$/laravel/public/js/script.js" />
         <option value="$PROJECT_DIR$/laravel/public/css/app.css" />
@@ -86,16 +62,10 @@
         <option value="$PROJECT_DIR$/laravel/node_modules/vue-trix/src/components/VueTrix.vue" />
         <option value="$PROJECT_DIR$/laravel/node_modules/vue-trix/example/src/components/Editor.vue" />
         <option value="$PROJECT_DIR$/laravel/node_modules/vue-trix/dist/vue-trix.esm.js" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/posts/index.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/partials/add-post.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/account/app.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/account/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Post.php" />
         <option value="$PROJECT_DIR$/laravel/app/Photo.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/laravel/app/User.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/posts/post.blade.php" />
         <option value="$PROJECT_DIR$/laravel/vendor/tcg/voyager/src/Models/Post.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/account/photos/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/account/videos/index.blade.php" />
@@ -103,10 +73,22 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/partials/add-photo.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Video.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/resources/views/images/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AccountController.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/partials/add-post.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/account/app.blade.php" />
         <option value="$PROJECT_DIR$/laravel/routes/web.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/left_bar.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/account/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/images/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/layouts/account/timeline.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/posts/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/posts/post.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/resources/js/components/Comment.vue" />
+        <option value="$PROJECT_DIR$/laravel/resources/js/components/UserComponent.vue" />
       </list>
     </option>
   </component>
@@ -234,53 +216,6 @@
               <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="SocIT" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SocIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SocIT" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -290,7 +225,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Messenger-App-VueJS-and-Laravel-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -352,11 +287,12 @@
       <workItem from="1554734134426" duration="20578000" />
       <workItem from="1554803856903" duration="30957000" />
       <workItem from="1554910024002" duration="9587000" />
+      <workItem from="1555241802503" duration="2320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206082000" />
+    <option name="totallyTimeSpent" value="208402000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -370,7 +306,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21860817" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,91 +354,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/vendor/tcg/voyager/resources/views/formfields/rich_text_box.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/node_modules/vue-select/src/components/Select.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/node_modules/vue-trix/dist/vue-trix.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#2201#2499#2" expanded="true" />
-            <element signature="e#2563#2743#2" expanded="true" />
-            <element signature="e#2805#3370#2" expanded="true" />
-            <element signature="e#3434#4046#2" expanded="true" />
-            <element signature="e#4109#4294#2" expanded="true" />
-            <element signature="e#4361#4554#2" expanded="true" />
-            <element signature="e#4616#4853#2" expanded="true" />
-            <element signature="e#4922#5210#2" expanded="true" />
-            <element signature="e#5279#5550#2" expanded="true" />
-            <element signature="e#5612#5835#2" expanded="true" />
-            <element signature="e#5897#6109#2" expanded="true" />
-            <element signature="e#6189#6419#2" expanded="true" />
-            <element signature="e#6499#6734#2" expanded="true" />
-            <element signature="e#10259#10522#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/node_modules/vue-trix/example/public/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/users/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="4" column="107330" selection-start-line="4" selection-start-column="107316" selection-end-line="4" selection-end-column="107332" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="6058" column="33" lean-forward="true" selection-start-line="6058" selection-start-column="33" selection-end-line="6058" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Comment.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/PostForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../basketboll-master/app/Http/Controllers/Matches/MatchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../basketboll-master/resources/views/Admin/articles/partials/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../basketboll-master/resources/views/Admin/articles/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="123" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/node_modules/vue-trix/example/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -563,29 +414,8 @@
     <entry file="file://$PROJECT_DIR$/laravel/app/Category.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/posts/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/partials/add-post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Likeable.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Photo.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,23 +424,6 @@
           <folding>
             <element signature="e#23#62#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/account/timeline.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/account/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -656,20 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="189" column="20" selection-start-line="169" selection-start-column="14" selection-end-line="189" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/account/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="77" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/account/photos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -721,34 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/posts/post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/images/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="60" lean-forward="true" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -759,8 +530,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/partials/add-post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/account/photos/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="23" column="103" selection-start-line="23" selection-start-column="103" selection-end-line="23" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/account/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="93" column="94" selection-start-line="93" selection-start-column="94" selection-end-line="93" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/account/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="106" column="72" selection-start-line="106" selection-start-column="72" selection-end-line="106" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/images/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/account/timeline.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/left_bar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/left_menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/top_menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/layouts/right_bar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="80" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/posts/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/posts/post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/videos/videos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="92" column="82" selection-start-line="92" selection-start-column="82" selection-end-line="92" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/Comment.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/LikeComponent.vue">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/PostForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/Subscribe.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/textEmoji.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/resources/js/components/UserComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

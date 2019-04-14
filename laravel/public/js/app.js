@@ -43775,9 +43775,16 @@ var render = function() {
     }),
     _vm._v(" "),
     _c("h4", [
-      _c("a", { staticClass: "profile-link", attrs: { href: "#" } }, [
-        _vm._v(_vm._s(this.comment.user_name))
-      ]),
+      _c(
+        "a",
+        {
+          staticClass: "profile-link",
+          attrs: {
+            href: "http://localhost:8000/account/" + this.comment.user_id
+          }
+        },
+        [_vm._v(_vm._s(this.comment.user_name))]
+      ),
       _vm._v("  :   ")
     ]),
     _vm._v(" "),
@@ -44132,9 +44139,16 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "col-md-7 col-sm-7" }, [
             _c("h5", [
-              _c("a", { staticClass: "profile-link", attrs: { href: "#" } }, [
-                _vm._v(_vm._s(_vm.user.name))
-              ])
+              _c(
+                "a",
+                {
+                  staticClass: "profile-link",
+                  attrs: {
+                    href: "http://localhost:8000/account/" + this.user.id
+                  }
+                },
+                [_vm._v(_vm._s(_vm.user.name))]
+              )
             ]),
             _vm._v(" "),
             _c("p", [_vm._v("Проффесия")]),

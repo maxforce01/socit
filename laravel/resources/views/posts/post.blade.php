@@ -9,7 +9,7 @@
                 <img src="{{asset('/storage/'.$post->authorId['avatar'])}}" alt="user" class="profile-photo-md pull-left" />
                 <div class="post-detail">
                     <div class="user-info">
-                        <h5><a href="timeline.html" class="profile-link">{{$post->authorId['name']}}</a> <span class="following">following</span></h5>
+                        <h5><a href="{{route('account',$post->author_id)}}" class="profile-link">{{$post->authorId['name']}}</a> <span class="following">following</span></h5>
                         <p class="text-muted">Published {{$post->created_at->diffforHumans()}}</p>
                     </div>
                     @if($post->author_id == \Illuminate\Support\Facades\Auth::id())
@@ -38,7 +38,7 @@
                     @if(!empty($post->tags))
                         <ul class="">
                             @foreach($post->tags as $tag)
-                                <a class="post-tag" href="">{{$tag->name}}</a>
+                                <a class="post-tag" href="{{route('post.tag',$tag->id)}}">{{$tag->name}}</a>
                             @endforeach
                         </ul>
                     @endif

@@ -47,11 +47,11 @@ Route::get('/users/subscribe/{id}','UserController@subscribe');
 Route::get('/users/unsubscribe/{id}','UserController@unsubscribe');
 Route::get('/subscriptions/','UserController@subscriptions')->name('subscriptions');
 Route::get('/subscriptions/{id}','UserController@subscriptionsUser')->name('subscriptions.user');
-Route::get('/user/{id}','UserController@thisUser');
+Route::get('/user/{id}','UserController@thisUser')->name('user');
 
 /*Account*/
-Route::get('/account/{id}','AccountController@userAccount');
-Route::get('/account/','AccountController@myAccount');
+Route::get('/account/{id}','AccountController@userAccount')->name('account');
+Route::get('/account/','AccountController@myAccount')->name('myAccount');
 
 
 /*Media*/

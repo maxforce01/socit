@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index-register.html"><img src="{{url('http://localhost:8000/storage/settings/March2019/t62ZmnwjGz19feOClIsB.png')}}"  alt="logo" /></a>
+                <a class="navbar-brand" href="#"><img src="{{url('http://localhost:8000/storage/settings/March2019/t62ZmnwjGz19feOClIsB.png')}}"  alt="logo" /></a>
             </div>
 
                         {{menu('Categories','layouts.top_menu')}}

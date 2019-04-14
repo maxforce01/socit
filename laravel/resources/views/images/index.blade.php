@@ -6,7 +6,7 @@
                 <img src="{{asset('/storage/'.$image->user->avatar)}}" alt="user" class="profile-photo-md pull-left" />
                 <div class="post-detail">
                     <div class="user-info">
-                        <h5><a href="timeline.html" class="profile-link">{{$image->user->name}}</a> <span class="following">following</span></h5>
+                        <h5><a href="{{route('account',$image->user->id)}}" class="profile-link">{{$image->user->name}}</a> <span class="following">following</span></h5>
                         <p class="text-muted">Published {{$image->created_at->diffforHumans()}}</p>
                     </div>
                         @if($image->user->id == \Illuminate\Support\Facades\Auth::id())
