@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Events\newNotification;
+use App\Notification;
 use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -15,6 +17,14 @@ class EventController extends Controller
     public function removeLike($post_id)
     {
         Auth::user()->likes()->where('likeable_id',$post_id)->delete();
+        $post = Post::find($post_id);
+        $notification = new Notification;
+        $notification -> user_id = $post->authorId->id;
+        $notification->read = 0;
+        $notification->from_user = Auth::user()->id;
+        $notification ->text =" разонравилась ваша запись ".$post->title;
+        $notification->save();
+        broadcast(new newNotification($notification));
         return response()->json("ok");
     }
     public function getLike($post_id)
@@ -27,11 +37,27 @@ class EventController extends Controller
         $like = $post->likes()->create([]);
         $like->user_id = Auth::user()->id;
         Auth::user()->likes()->save($like);
+        $post = Post::find($post_id);
+        $notification = new Notification;
+        $notification -> user_id = $post->authorId->id;
+        $notification->read = 0;
+        $notification->from_user = Auth::user()->id;
+        $notification ->text =" понравилась ваша запись ".$post->title;
+        $notification->save();
+        broadcast(new newNotification($notification));
         return response()->json("ok");
     }
     public function repost($post_id){
         $post = Post::find($post_id);
         Auth::user()->repostPosts()->attach($post);
+        $post = Post::find($post_id);
+        $notification = new Notification;
+        $notification -> user_id = $post->authorId->id;
+        $notification->read = 0;
+        $notification->from_user = Auth::user()->id;
+        $notification ->text =" поделился вашей записью у себя на странице ".$post->title;
+        $notification->save();
+        broadcast(new newNotification($notification));
         return response()->json("ok");
     }
     public function unrepost($post_id){
@@ -50,5 +76,16 @@ class EventController extends Controller
     public function tags()
     {
         return response()->json(Tag::all());
+    }
+
+    public function refreshNotif($id)
+    {
+        $notifications = Notification::where('user_id',$id)->get();
+        foreach ($notifications as $notification)
+        {
+            $notification->read = 1;
+            $notification->save();
+        }
+        return response()->json("ok");
     }
 }

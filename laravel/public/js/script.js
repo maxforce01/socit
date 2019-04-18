@@ -1,6 +1,7 @@
 'use strict'
-
 //Preloader
+
+
 var preloader = $('#spinner-wrapper');
 $(window).on('load', function() {
     var preloaderFadeOutTime = 500;
@@ -165,3 +166,23 @@ function initMap() {
     map: map
   });
 }
+function reload_script()
+{
+    var selectedVal = $(".parent :selected").val();
+    $.ajax({
+        url: "/categories/child/" + selectedVal,
+        type: "get",
+        success: function (data, textStatus, jqXHR) {
+            var opts = [];
+            for (var i = 0; i < data.length; i++) {
+                opts += "<option value='" + data[i].id + "'>" + data[i].name + "</option>";
+            }
+            $('.child').html(opts);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert('Error: ' + textStatus);
+        }
+    });
+}
+reload_script();
+

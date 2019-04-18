@@ -11,6 +11,13 @@
 |
 */
 
-Broadcast::channel('App.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Broadcast;
+
+Broadcast::channel('messages.{id}', function ($user, $id) {
+    return $user->id === (int) $id;
+});
+
+Broadcast::channel('notification', function ($user) {
+    return Auth::check();
 });

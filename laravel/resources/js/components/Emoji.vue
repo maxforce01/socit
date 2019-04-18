@@ -13,11 +13,11 @@
         >
         <picker
 
-            v-show="showEmojiPicker"
-            title="Pick your emoji..."
-            emoji="point_up"
-            @select="addEmoji"
-        />
+        v-show="showEmojiPicker"
+        title="Pick your emoji..."
+        emoji="point_up"
+        @select="addEmoji"
+    />
         <span
 
             class="emoji-trigger"

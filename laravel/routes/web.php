@@ -48,6 +48,8 @@ Route::get('/users/unsubscribe/{id}','UserController@unsubscribe');
 Route::get('/subscriptions/','UserController@subscriptions')->name('subscriptions');
 Route::get('/subscriptions/{id}','UserController@subscriptionsUser')->name('subscriptions.user');
 Route::get('/user/{id}','UserController@thisUser')->name('user');
+Route::get('/notifications','UserController@notifications')->name('notifications');
+Route::get('/refresh/{id}','EventController@refreshNotif');
 
 /*Account*/
 Route::get('/account/{id}','AccountController@userAccount')->name('account');
@@ -63,3 +65,10 @@ Route::get('/photos','AccountController@allPhotos')->name('all.photos');
 Route::get('/vines','AccountController@allVideos')->name('all.videos');
 Route::get('/video/delete/{id}','AccountController@deleteVideo')->name('video.delete');
 Route::get('/photo/delete/{id}','AccountController@deletePhoto')->name('image.delete');
+
+
+/*Chat*/
+Route::get('/contacts', 'ContactsController@get');
+Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
+Route::post('/conversation/send', 'ContactsController@send');
+Route::get('/messenger','UserController@chat')->name('messenger');

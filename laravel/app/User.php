@@ -70,7 +70,7 @@ class User extends \TCG\Voyager\Models\User
 
     public function isSubscribe(User $user)
     {
-        foreach (Auth::user()->subscriptions as $one)
+        foreach ($this->subscriptions as $one)
         {
             if($one->id == $user->id)
                 return true;
@@ -99,5 +99,9 @@ class User extends \TCG\Voyager\Models\User
     public function videos()
     {
         return $this->hasMany('App\Video','user_id');
+    }
+    public function  notifications()
+    {
+        return $this->hasMany('App\Notification');
     }
 }

@@ -29,7 +29,7 @@ Vue.component('comment', require('./components/Comment.vue').default);
 Vue.component('select2', vSelect);
 Vue.component('richtextbox', VueTrix);
 Vue.component('post-form', require('./components/PostForm.vue').default);
-
+Vue.component('chat-app', require('./components/ChatApp.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
