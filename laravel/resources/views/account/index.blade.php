@@ -6,10 +6,6 @@
     @foreach($posts as $post)
         @if($post->isLesson())
             <div class="post-content">
-                <div class="post-date hidden-xs hidden-sm">
-                    <h5>{{$user->name}}</h5>
-                    <p class="text-grey">{{$post->created_at->diffforHumans()}}</p>
-                </div><!--Post Date End-->
                 <div class="post-container">
                     <img src="{{asset('/storage/'.$user->avatar)}}" alt="user" class="profile-photo-md pull-left" />
                     <div class="post-detail">
@@ -54,10 +50,6 @@
 
         @if($post->isHelp())
             <div class="post-content">
-                <div class="post-date hidden-xs hidden-sm">
-                    <h5>{{$user->name}}</h5>
-                    <p class="text-grey">{{$post->created_at->diffforHumans()}}</p>
-                </div><!--Post Date End-->
                 <div class="post-container">
                     <img src="{{asset('/storage/'.$user->avatar)}}" alt="user" class="profile-photo-md pull-left" />
                     <div class="post-detail">
@@ -90,13 +82,8 @@
                 </div>
             </div>
         @endif
-
         @if($post->isNews())
             <div class="post-content">
-                <div class="post-date hidden-xs hidden-sm">
-                    <h5>{{$user->name}}</h5>
-                    <p class="text-grey">{{$post->created_at->diffforHumans()}}</p>
-                </div><!--Post Date End-->
                 <div class="post-container">
                     <img src="{{asset('/storage/'.$user->avatar)}}" alt="user" class="profile-photo-md pull-left" />
                     <div class="post-detail">

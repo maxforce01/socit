@@ -1,10 +1,8 @@
 <div class="create-post">
     <div class="row">
-        <div class="container">
-            <div class="my-5 mx-auto text-center">
-                <button class="btn btn-info btn-md" data-toggle="modal" data-target="#exampleModal">Добавить запись</button>
-            </div>
-        </div>
+                <div class="text-center">
+                    <button class="btn btn-info btn-md" data-toggle="modal" data-target="#exampleModal">Опубликовать</button>
+                </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

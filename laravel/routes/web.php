@@ -54,7 +54,12 @@ Route::get('/refresh/{id}','EventController@refreshNotif');
 /*Account*/
 Route::get('/account/{id}','AccountController@userAccount')->name('account');
 Route::get('/account/','AccountController@myAccount')->name('myAccount');
-
+Route::get('/account/about/{id}','AccountController@about')->name('about');
+Route::get('/account/profile/edit/','AccountController@edit')->name('edit.profile');
+Route::post('/account/profile/update','AccountController@update')->name('update.profile');
+Route::get('/account/edit/work/{id}','AccountController@editWork')->name('edit.work');
+Route::get('/account/create/work','AccountController@createWork')->name('create.work');
+Route::post('/account/update/work','AccountController@updateWork')->name('update.work');
 
 /*Media*/
 Route::get('/gallery/{id}','AccountController@photos')->name('gallery');

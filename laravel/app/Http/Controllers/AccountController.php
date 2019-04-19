@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Job;
 use App\Photo;
 use App\Post;
 use App\User;
@@ -97,5 +98,65 @@ class AccountController extends Controller
         }
         return view('account.index',['user'=>Auth::user(),'posts'=>$response]);
     }
+    public function about($id)
+    {
+        $user = User::find($id);
+        return view('account.about.index',['user'=>$user]);
+    }
+    public function edit()
+    {
+        $user = User::find(Auth::user()->id);
+        return view('account.about.edit',['user'=>$user]);
+    }
+    public function update(Request $request)
+    {
+        $user = User::find(Auth::user()->id);
+        $user->profession = $request->profession;
+        $user->name = $request->name;
+        $user->Birth = $request->Birth;
+        $user->city = $request->city;
+        $user->country = $request->country;
+        $user->status = $request->status;
+        $user->about = $request->about;
+        if ($request->file('avatar') != null) {
+            $user->avatar = $request->file('avatar')->store('avatars','public');
+        }
+         $user->interests()->detach();
+        $user->languages()->detach();
+        foreach ($request->interests as $interest)
+        {
+            $user->interests()->attach($interest);
+        }
 
+        foreach ($request->lang as $lang)
+        {
+            $user->languages()->attach($lang);
+        }
+        $user->save();
+        return view('account.about.index',['user'=>$user]);
+    }
+    public function editWork($id)
+    {
+        $work = Job::find($id);
+        return view('account.about.work.index',['work'=>$work,'user'=>Auth::user()]);
+    }
+    public function createWork()
+    {
+        return view('account.about.work.index',['user'=>Auth::user()]);
+    }
+    public function updateWork(Request $request)
+    {
+        if($request->id != null)
+        $job = Job::find($request->id);
+        else {
+            $job = new Job;
+            $job->user_id = Auth::user()->id;
+        }
+        $job->company = $request->company;
+        $job->position = $request->position;
+        $job->start = $request->start;
+        $job->end = $request->end;
+        $job->save();
+        return view('account.about.index',['user'=>Auth::user()]);
+    }
 }

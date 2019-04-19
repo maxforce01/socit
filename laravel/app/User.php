@@ -17,6 +17,7 @@ class User extends \TCG\Voyager\Models\User
      *
      * @var array
      */
+    protected $dates = ['Birth'];
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -104,4 +105,36 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasMany('App\Notification');
     }
+    public function jobs()
+    {
+        return $this->hasMany('App\Job','user_id');
+    }
+
+    public function languages()
+    {
+        return $this->belongsToMany('App\Language','user_language');
+    }
+    public function interests()
+    {
+        return $this->belongsToMany('App\Tag','tags_users');
+    }
+    public function isTag(Tag $tag)
+    {
+        foreach ($this->interests as $interest)
+        {
+            if($interest->id == $tag->id)
+                return true;
+        }
+        return false;
+    }
+    public function isLanguage(Language $language)
+    {
+        foreach ($this->languages as $lang)
+        {
+            if($lang->id == $language->id)
+                return true;
+        }
+        return false;
+    }
+
 }

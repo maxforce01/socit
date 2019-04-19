@@ -8,13 +8,14 @@
                     <div class="profile-info">
                         <img src="{{asset('/storage/'.$user->avatar)}}" alt="" class="img-responsive profile-photo" />
                         <h3>{{$user->name}}</h3>
-                        <p class="text-muted">Creative Director</p>
+                        <p class="text-muted">{{$user->profession}}</p>
+                        <p class="text-muted">{{$user->status}}</p>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <ul class="list-inline profile-menu">
-                        <li><a href="{{route('user',$user->id)}}" class="active">Лента</a></li>
-                        <li><a href="timeline-about.html">About</a></li>
+                        <li><a href="{{route('account',$user->id)}}" class="active">Лента</a></li>
+                        <li><a href="{{route('about',$user->id)}}">Информация</a></li>
                         <li><a href="{{route('gallery',$user->id)}}">Альбом</a></li>
                         <li><a href="{{route('videos',$user->id)}}">Видео</a></li>
                         <li><a href="{{route('subscriptions.user',$user->id)}}">Подписчики</a></li>
@@ -28,7 +29,6 @@
                                 @endif
                             @endif</li>
                         <li>{{$user->subscribers->count()}} people following</li>
-
                     </ul>
                 </div>
             </div>
@@ -39,12 +39,13 @@
             <div class="profile-info">
                 <img src="{{asset('/storage/'.$user->avatar)}}" alt="" class="img-responsive profile-photo" />
                 <h4>{{$user->name}}</h4>
-                <p class="text-muted">Creative Director</p>
+                <p class="text-muted">{{$user->profession}}</p>
+                <p class="text-muted">{{$user->status}}</p>
             </div>
             <div class="mobile-menu">
                 <ul class="list-inline">
-                        <li><a href="{{route('user',$user->id)}}" class="active">Лента</a></li>
-                        <li><a href="timeline-about.html">About</a></li>
+                        <li><a href="{{route('account',$user->id)}}" class="active">Лента</a></li>
+                          <li><a href="{{route('about',$user->id)}}">Информация</a></li>
                         <li><a href="{{route('gallery',$user->id)}}">Альбом</a></li>
                         <li><a href="{{route('videos',$user->id)}}">Видео</a></li>
                         <li><a href="{{route('subscriptions.user',$user->id)}}">Подписчики</a></li>

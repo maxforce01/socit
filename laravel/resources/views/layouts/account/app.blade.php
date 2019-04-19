@@ -75,7 +75,6 @@
                     <div class="col-md-7">
                         @yield('content')
                     </div>
-                     @include('layouts.right_bar')
                 </div>
             </div>
         </div>

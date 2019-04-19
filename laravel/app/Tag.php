@@ -11,4 +11,8 @@ class Tag extends Model
     {
         return $this->belongsToMany('App\Post');
     }
+    public function users()
+    {
+        return $this->belongsToMany('App\User','tags_users');
+    }
 }
