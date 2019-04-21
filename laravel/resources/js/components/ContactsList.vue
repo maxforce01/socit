@@ -1,5 +1,7 @@
 <template>
     <div class="contacts-list">
+        <label for="filtername">Find your hero:</label>
+        <input v-model="findName" id="filtername" type="text" />
         <ul>
             <li v-for="contact in sortedContacts" :key="contact.id" @click="selectContact(contact)" :class="{ 'selected': contact == selected }">
                 <div class="avatar">
@@ -25,6 +27,7 @@
         },
         data() {
             return {
+                findName:"",
                 selected: this.contacts.length ? this.contacts[0] : null
             };
         },
@@ -37,11 +40,21 @@
         },
         computed: {
             sortedContacts() {
-                return _.sortBy(this.contacts, [(contact) => {
-                    if (contact == this.selected) {
+                let result = this.contacts;
+                if (!this.findName)
+                    return _.sortBy(result, [(contact) => {
+                        if (contact === this.selected) {
+                            return Infinity;
+                        }
+                        return contact.unread;
+                    }]).reverse();;
+                const filterValue = this.findName.toLowerCase();
+                const filter = contact =>
+                    contact.name.toLowerCase().includes(filterValue);
+                return _.sortBy(result.filter(filter), [(contact) => {
+                    if (contact === this.selected) {
                         return Infinity;
                     }
-
                     return contact.unread;
                 }]).reverse();
             }

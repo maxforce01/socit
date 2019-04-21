@@ -4,10 +4,9 @@
         <div class="nearby-user">
             <div class="row">
                 <div class="col-md-2 col-sm-2">
-                    <img :src="path" alt="user" class="profile-photo-lg" />
+                    <img :src="'http://localhost:8000/storage/'+this.user.avatar" alt="user" class="profile-photo-lg" />
                 </div>
                 <div class="col-md-7 col-sm-7">
-
                     <h5><a :href="'http://localhost:8000/account/'+this.user.id" class="profile-link">{{user.name}}</a></h5>
                     <p>Проффесия</p>
                     <p class="text-muted"></p>
@@ -24,10 +23,11 @@
 </template>
 <script>
     export default {
+        data() {
+            return {flag:this.user.flag,}
+    },
         props:{
             user:Object,
-            flag:Boolean,
-            path: String
         },
         methods:{
             subscribe:function(responce)
@@ -35,16 +35,17 @@
                 toastr.success("Cool subcribe 😜");
                 axios
                     .get("/users/subscribe/"+this.user.id)
-                    .then(response = "ok" ? this.flag = true : this.flag = false);
+                    .then(responce => (responce = "ok" ? this.flag = true : this.flag = false));
                 },
             unsubscribe:function (responce) {
                 toastr.error("Return back 🥺");
                 axios
                     .get("/users/unsubscribe/"+this.user.id)
-                    .then(response = "ok" ? this.flag = false : this.flag = true);
-            }
+                    .then(responce =>(responce = "ok" ? this.flag = false : this.flag = true));
+            },
         },
         mounted() {
+            console.log(this.flag)
         }
     }
 </script>

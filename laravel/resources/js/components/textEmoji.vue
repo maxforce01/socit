@@ -42,6 +42,7 @@
                 axios.get('/comments/'+e.id)
                     .then(response => (this.commentsArray.splice(this.commentsArray.indexOf(e),1)));
             },
+
         },
     }
 </script>

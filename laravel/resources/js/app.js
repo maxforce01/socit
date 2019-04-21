@@ -22,11 +22,11 @@ import VueTrix from 'vue-trix'
 
 Vue.component('likes', require('./components/LikeComponent.vue').default);
 Vue.component('user', require('./components/UserComponent.vue').default);
+Vue.component('users', require('./components/Users.vue').default);
 Vue.component('subscribe', require('./components/Subscribe.vue').default);
 Vue.component('textarea2', require('./components/Emoji.vue').default);
 Vue.component('comments', require('./components/textEmoji.vue').default);
 Vue.component('comment', require('./components/Comment.vue').default);
-Vue.component('select2', vSelect);
 Vue.component('richtextbox', VueTrix);
 Vue.component('post-form', require('./components/PostForm.vue').default);
 Vue.component('chat-app', require('./components/ChatApp.vue').default);

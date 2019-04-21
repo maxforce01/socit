@@ -13,23 +13,36 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('users.index',['users'=>User::all()]);
+        $responce = User::all();
+        foreach ($responce as $user)
+        {
+            $user->flag = Auth::user()->isSubscribe($user);
+        }
+        return view('users.index',['users'=>$responce]);
     }
     public function subscriptions()
     {
         $users = User::all();
-        $reponce = collect();
+        $responce = collect();
         foreach ($users as $user) {
             if(Auth::user()->isSubscribe($user)) {
-                $reponce->push($user);
+                $responce->push($user);
             }
         }
-        return view('users.index',['users'=>$reponce]);
+        foreach ($responce as $user)
+        {
+            $user->flag = Auth::user()->isSubscribe($user);
+        }
+        return view('users.index',['users'=>$responce]);
     }
     public function subscriptionsUser($id)
     {
         $user = User::find($id);
         $responce = $user->subscriptions;
+        foreach ($responce as $user)
+        {
+            $user->flag = Auth::user()->isSubscribe($user);
+        }
         return view('users.index',['users'=>$responce]);
     }
     public function subscribe($id)
@@ -70,5 +83,10 @@ class UserController extends Controller
     public function notifications()
     {
         return view('notifications.index',['notifications'=> Notification::where('user_id',Auth::user()->id)->orderBy('created_at','desc')->get()]);
+    }
+    public function checkUser($id)
+    {
+        $user = User::find($id);
+        return response()->json(Auth::user()->isSubscribe($user));
     }
 }

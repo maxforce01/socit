@@ -40,6 +40,7 @@ Route::get('/posts/{slug}','PostController@index')->name('post.index');
 Route::get('/posts/','PostController@home_index')->name('post.home_index');
 Route::get('/', 'HomeController@index')->name('home');
 Route::post('/post/create','PostController@store')->name('post.create');
+Route::get('/search/','PostController@search')->name('search');
 
 /*Users*/
 Route::get('/users/','UserController@index')->name('users');
@@ -50,6 +51,7 @@ Route::get('/subscriptions/{id}','UserController@subscriptionsUser')->name('subs
 Route::get('/user/{id}','UserController@thisUser')->name('user');
 Route::get('/notifications','UserController@notifications')->name('notifications');
 Route::get('/refresh/{id}','EventController@refreshNotif');
+Route::get('/check/{id}','UserController@checkUser');
 
 /*Account*/
 Route::get('/account/{id}','AccountController@userAccount')->name('account');

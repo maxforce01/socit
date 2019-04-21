@@ -92,4 +92,31 @@ class PostController extends Controller
         }
         return redirect()->back();
     }
+    public function search(Request $request)
+    {
+        $response = collect();
+        if($request->has('news')) {
+            $new = Category::where('slug','news')->first();
+            $categories = Category::where('parent_id',$new->id)->get();
+            $categories->push($new);
+            foreach ($categories as $category)
+                foreach (Post::where('title', 'like', '%' . $request->find . '%')->where('category_id',$category->id)->get() as $post)
+            $response->push($post);
+        }
+        if($request->has('help')){
+            $help = Category::where('slug','help')->first();
+            $categories = Category::where('parent_id',$help->id)->get();
+            $categories->push($help);
+            foreach ($categories as $category)
+                foreach (Post::where('title', 'like', '%' . $request->find . '%')->where('category_id',$category->id)->get() as $post)
+                    $response->push($post);}
+        if($request->has('lessons')){
+            $lessons = Category::where('slug','lessons')->first();
+            $categories = Category::where('parent_id',$lessons->id)->get();
+            $categories->push($lessons);
+            foreach ($categories as $category)
+                foreach (Post::where('title', 'like', '%' . $request->find . '%')->where('category_id',$category->id)->get() as $post)
+                    $response->push($post);}
+        return view('posts.index',['posts'=>$response->sortByDesc('created_at')]);
+    }
 }
