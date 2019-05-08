@@ -28,7 +28,6 @@
                 .listen('NewMessage', (e) => {
                     this.hanleIncoming(e.message);
                 });
-
             axios.get('/contacts')
                 .then((response) => {
                     this.contacts = response.data;
@@ -52,7 +51,6 @@
                     this.saveNewMessage(message);
                     return;
                 }
-
                 this.updateUnreadCount(message.from_contact, false);
             },
             updateUnreadCount(contact, reset) {

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\newNotification;
+use App\Events\NewMessage;
 use App\Notification;
+use App\Notifications\newNotification;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,7 +56,8 @@ class UserController extends Controller
         $notification->from_user = Auth::user()->id;
         $notification ->text =" подписался на вас. Подпишитесь если хотите просматривать сообщения";
         $notification->save();
-        broadcast(new newNotification($notification));
+        $user  = User::find($notification->user_id);
+        broadcast(new NewMessage($notification));
         return response()->json("ok");
     }
     public function unsubscribe($id)
@@ -68,7 +70,8 @@ class UserController extends Controller
         $notification->from_user = Auth::user()->id;
         $notification ->text =" отписался на вас.";
         $notification->save();
-        broadcast(new newNotification($notification));
+        $user  = User::find($notification->user_id);
+        broadcast(new NewMessage($notification));
         return response()->json("ok");
     }
     public function thisUser($id)

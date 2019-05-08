@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Events\newNotification;
+use App\Events\NewMessage;
 use App\Notification;
+use App\Notifications\newNotification;
 use App\Post;
 use App\Tag;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +26,8 @@ class EventController extends Controller
         $notification->from_user = Auth::user()->id;
         $notification ->text =" разонравилась ваша запись ".$post->title;
         $notification->save();
-        broadcast(new newNotification($notification));
+        $user  = User::find($post->authorId->id);
+        broadcast(new NewMessage($notification));
         return response()->json("ok");
     }
     public function getLike($post_id)
@@ -44,7 +47,8 @@ class EventController extends Controller
         $notification->from_user = Auth::user()->id;
         $notification ->text =" понравилась ваша запись ".$post->title;
         $notification->save();
-        broadcast(new newNotification($notification));
+        $user  = User::find($notification->user_id);
+        broadcast(new NewMessage($notification));
         return response()->json("ok");
     }
     public function repost($post_id){
@@ -57,7 +61,8 @@ class EventController extends Controller
         $notification->from_user = Auth::user()->id;
         $notification ->text =" поделился вашей записью у себя на странице ".$post->title;
         $notification->save();
-        broadcast(new newNotification($notification));
+        $user  = User::find($notification->user_id);
+        broadcast(new NewMessage($notification));
         return response()->json("ok");
     }
     public function unrepost($post_id){

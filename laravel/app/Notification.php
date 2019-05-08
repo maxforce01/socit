@@ -11,4 +11,8 @@ class Notification extends Model
     {
       return  $this->belongsTo('App\User','from_user');
     }
+    public function toUser()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }

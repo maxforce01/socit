@@ -72737,7 +72737,13 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('chat-app', __webpack_requi
  */
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
-  el: '#app'
+  el: '#app',
+  created: function created() {
+    var userid = $('meta[name="userid"]').attr('content');
+    Echo.private("messages." + userid).listen('NewMessage', function (e) {
+      toastr.success(e.notification.user.name + e.notification.text);
+    });
+  }
 });
 
 /***/ }),

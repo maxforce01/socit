@@ -18,6 +18,6 @@ Broadcast::channel('messages.{id}', function ($user, $id) {
     return $user->id === (int) $id;
 });
 
-Broadcast::channel('notification', function ($user) {
-    return Auth::check();
+Broadcast::channel('notification.{id}', function ($user,$id) {
+    return $user->id === (int) $id;
 });

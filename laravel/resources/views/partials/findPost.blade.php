@@ -1,5 +1,6 @@
 <form action="{{route('search')}}">
     <label>
+        Поиск
         <input class="form-control" name="find" required type="text">
     </label>
     <label>

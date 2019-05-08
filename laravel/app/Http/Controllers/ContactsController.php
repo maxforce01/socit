@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\newNotification;
+use App\Events\NewMessage;
 use App\Notification;
 use Illuminate\Http\Request;
 use App\User;
 use App\Message;
-use App\Events\NewMessage;
 use Illuminate\Support\Facades\Auth;
-
+use App\Notifications\newNotification;
 class ContactsController extends Controller
 {
     public function get()
@@ -63,17 +62,17 @@ class ContactsController extends Controller
         $message->to = $request->contact_id;
         $message->text = $request->text;
         $message->save();
-         broadcast(new NewMessage($message));
+        broadcast(new NewMessage($message));
         $notification = new Notification;
         $notification -> user_id = $request->contact_id;
         $notification->read = 0;
         $notification->from_user = Auth::user()->id;
         if(Auth::user()->isSubscribe(User::find($request->contact_id)))
-        $notification ->text = " написал вам новое сообщение ";
+            $notification ->text = " написал вам новое сообщение ";
         else
             $notification ->text =" написал вам новое сообщение. Подпишитесь на него если хотите прочитать ";
         $notification->save();
-        broadcast(new newNotification($notification));
+        broadcast(new NewMessage($notification));
         return response()->json($message);
     }
 }

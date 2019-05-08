@@ -9,6 +9,7 @@ import moment from 'vue-moment'
 import Vue from 'vue'
 import vSelect from 'vue-select'
 import VueTrix from 'vue-trix'
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -38,6 +39,14 @@ Vue.component('chat-app', require('./components/ChatApp.vue').default);
 
 const app = new Vue({
     el: '#app',
+    created()
+    {
+        var userid = $('meta[name="userid"]').attr('content');
+        Echo.private(`messages.` + userid)
+            .listen('NewMessage', (e) => {
+                toastr.success(e.notification.user.name + e.notification.text);
+            });
+    }
 });
 
 
