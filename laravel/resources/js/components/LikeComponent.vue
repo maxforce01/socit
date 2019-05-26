@@ -2,8 +2,8 @@
     <div ref="div">
         <div class="reaction" >
             <button v-if="flag" v-on:click="removelike" class="btn text-green"><i class="icon ion-thumbsup"></i>{{counter}} Likes</button>
-            <button v-if="flag_rep" v-on:click="repost" class="btn text-red"><i class="fas fa-reply-all"></i>Repost</button>
             <button v-if="!flag" v-on:click="getlike" class="btn text-green"><i class="icon ion-thumbsup"></i>{{counter}} Likes</button>
+            <button v-if="flag_rep" v-on:click="repost" class="btn text-red"><i class="fas fa-reply-all"></i>Repost</button>
         </div>
     </div>
 </template>

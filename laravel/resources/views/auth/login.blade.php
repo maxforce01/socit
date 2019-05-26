@@ -46,7 +46,7 @@
                                             @endif
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Login Now</button>
+                                    <button type="submit" class="btn btn-info">Login Now</button>
                                 </form><!--Login Form Ends-->
 
                             </div>

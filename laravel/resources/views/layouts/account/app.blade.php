@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <meta name="userid" content="{{\Illuminate\Support\Facades\Auth::user()->id}}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

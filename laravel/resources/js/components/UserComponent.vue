@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-md-7 col-sm-7">
                     <h5><a :href="'http://localhost:8000/account/'+this.user.id" class="profile-link">{{user.name}}</a></h5>
-                    <p>Проффесия</p>
+                    <p>{{user.profession}}</p>
                     <p class="text-muted"></p>
                 </div>
                 <div class="col-md-3 col-sm-3">

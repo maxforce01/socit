@@ -62,6 +62,8 @@ Route::post('/account/profile/update','AccountController@update')->name('update.
 Route::get('/account/edit/work/{id}','AccountController@editWork')->name('edit.work');
 Route::get('/account/create/work','AccountController@createWork')->name('create.work');
 Route::post('/account/update/work','AccountController@updateWork')->name('update.work');
+Route::get('/account/password/change','AccountController@password')->name('password');
+Route::post('/account/password/change/save','AccountController@passwordSave')->name('password.save');
 
 /*Media*/
 Route::get('/gallery/{id}','AccountController@photos')->name('gallery');

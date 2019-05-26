@@ -44,8 +44,9 @@ const app = new Vue({
         var userid = $('meta[name="userid"]').attr('content');
         Echo.private(`messages.` + userid)
             .listen('NewMessage', (e) => {
+                if(userid!==e.notification.user.id){
                 toastr.success(e.notification.user.name + e.notification.text);
-            });
+                    }});
     }
 });
 

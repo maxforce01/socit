@@ -54,9 +54,6 @@ class PostController extends Controller
         return view('posts.index',['posts'=>$tag->posts->sortByDesc('created_at')]);
     }
 
-    /**
-     * @param Request $request
-     */
     public function store(Request $request)
     {
         $post = new Post;

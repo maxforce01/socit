@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div v-for="coment in commentsArray">
+    <div v-for="coment in sortedComents">
         <comment :auth="auth" :comment="coment" @deleComment="deleteComment"></comment>
     </div>
     <form class="post-comment" @submit.prevent='action()' method="post" >
@@ -44,5 +44,13 @@
             },
 
         },
+        computed: {
+            sortedComents() {
+                this.commentsArray.sort(( a, b) => {
+                    return new Date(a.created_at) - new Date(b.created_at);
+                });
+                return this.commentsArray;
+            }
+        }
     }
 </script>

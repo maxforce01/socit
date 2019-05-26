@@ -2553,6 +2553,14 @@ __webpack_require__.r(__webpack_exports__);
         return _this2.commentsArray.splice(_this2.commentsArray.indexOf(e), 1);
       });
     }
+  },
+  computed: {
+    sortedComents: function sortedComents() {
+      this.commentsArray.sort(function (a, b) {
+        return new Date(a.created_at) - new Date(b.created_at);
+      });
+      return this.commentsArray;
+    }
   }
 });
 
@@ -54853,14 +54861,6 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      _vm.flag_rep
-        ? _c(
-            "button",
-            { staticClass: "btn text-red", on: { click: _vm.repost } },
-            [_c("i", { staticClass: "fas fa-reply-all" }), _vm._v("Repost")]
-          )
-        : _vm._e(),
-      _vm._v(" "),
       !_vm.flag
         ? _c(
             "button",
@@ -54869,6 +54869,14 @@ var render = function() {
               _c("i", { staticClass: "icon ion-thumbsup" }),
               _vm._v(_vm._s(_vm.counter) + " Likes")
             ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.flag_rep
+        ? _c(
+            "button",
+            { staticClass: "btn text-red", on: { click: _vm.repost } },
+            [_c("i", { staticClass: "fas fa-reply-all" }), _vm._v("Repost")]
           )
         : _vm._e()
     ])
@@ -55185,7 +55193,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("p", [_vm._v("Проффесия")]),
+            _c("p", [_vm._v(_vm._s(_vm.user.profession))]),
             _vm._v(" "),
             _c("p", { staticClass: "text-muted" })
           ]),
@@ -55308,7 +55316,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._l(_vm.commentsArray, function(coment) {
+      _vm._l(_vm.sortedComents, function(coment) {
         return _c(
           "div",
           [
@@ -72741,7 +72749,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   created: function created() {
     var userid = $('meta[name="userid"]').attr('content');
     Echo.private("messages." + userid).listen('NewMessage', function (e) {
-      toastr.success(e.notification.user.name + e.notification.text);
+      if (userid !== e.notification.user.id) {
+        toastr.success(e.notification.user.name + e.notification.text);
+      }
     });
   }
 });

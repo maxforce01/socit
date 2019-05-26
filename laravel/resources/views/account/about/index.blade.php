@@ -58,5 +58,6 @@
     </div>
     @if($user->id == \Illuminate\Support\Facades\Auth::user()->id)
         <a href="{{route('edit.profile')}}" class="btn btn-success pull-right">Редактировать</a>
+        <a href="{{route('password')}}" class="btn btn-success pull-right">Изменить пароль</a>
     @endif
 @stop
