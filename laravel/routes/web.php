@@ -42,7 +42,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::post('/post/create','PostController@store')->name('post.create');
 Route::get('/search/','PostController@search')->name('search');
 
-/*Users*/
+/*users*/
 Route::get('/users/','UserController@index')->name('users');
 Route::get('/users/subscribe/{id}','UserController@subscribe');
 Route::get('/users/unsubscribe/{id}','UserController@unsubscribe');

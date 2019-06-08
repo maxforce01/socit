@@ -20,7 +20,7 @@
                             <label for="excerpt">Краткое описание</label>
                             <input type="text" id="excerpt" name="excerpt" class="form-control">
                             <label for="body">Описание</label>
-                            <richtextbox id="body"></richtextbox>
+                            <richtextbox name="body" id="body"></richtextbox>
                             <label>Категория</label>
                             <select class="parent form-control" onchange="reload_script()">
                                 @foreach($categories = \App\Category::where('parent_id',null)->get() as $category)

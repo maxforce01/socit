@@ -52,7 +52,7 @@ class UserController extends Controller
         Auth::user()->subscriptions()->attach($user);
         $notification = new Notification;
         $notification -> user_id = $id;
-        $notification->read = 0;
+        $notification->status = 0;
         $notification->from_user = Auth::user()->id;
         $notification ->text =" подписался на вас. Подпишитесь если хотите просматривать сообщения";
         $notification->save();
@@ -66,7 +66,7 @@ class UserController extends Controller
         Auth::user()->subscriptions()->detach($user);
         $notification = new Notification;
         $notification -> user_id = $id;
-        $notification->read = 0;
+        $notification->status = 0;
         $notification->from_user = Auth::user()->id;
         $notification ->text =" отписался на вас.";
         $notification->save();

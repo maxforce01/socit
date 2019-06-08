@@ -29,10 +29,10 @@
                     <div class="post-text">
                         <p>{!!$post->body!!}<i class="em em-anguished"></i> <i class="em em-anguished"></i> <i class="em em-anguished"></i></p>
                     </div>
-                    @if($post->video!='[]')
+                    @if(!empty($post->video))
                         <div class="line-divider"></div>
                         <video width="320" height="240" controls>
-                            <source src="{{asset('/storage/'.$post->video_path())}}" type="video/mp4">
+                            <source src="{{asset('/storage/'.$post->video)}}" type="video/mp4">
                         </video>
                     @endif
                     @if(!empty($post->tags))

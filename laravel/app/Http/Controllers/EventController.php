@@ -22,7 +22,7 @@ class EventController extends Controller
         $post = Post::find($post_id);
         $notification = new Notification;
         $notification -> user_id = $post->authorId->id;
-        $notification->read = 0;
+        $notification->status = 0;
         $notification->from_user = Auth::user()->id;
         $notification ->text =" разонравилась ваша запись ".$post->title;
         $notification->save();
@@ -43,7 +43,7 @@ class EventController extends Controller
         $post = Post::find($post_id);
         $notification = new Notification;
         $notification -> user_id = $post->authorId->id;
-        $notification->read = 0;
+        $notification->status = 0;
         $notification->from_user = Auth::user()->id;
         $notification ->text =" понравилась ваша запись ".$post->title;
         $notification->save();
@@ -57,7 +57,7 @@ class EventController extends Controller
         $post = Post::find($post_id);
         $notification = new Notification;
         $notification -> user_id = $post->authorId->id;
-        $notification->read = 0;
+        $notification->status = 0;
         $notification->from_user = Auth::user()->id;
         $notification ->text =" поделился вашей записью у себя на странице ".$post->title;
         $notification->save();
@@ -88,7 +88,7 @@ class EventController extends Controller
         $notifications = Notification::where('user_id',$id)->get();
         foreach ($notifications as $notification)
         {
-            $notification->read = 1;
+            $notification->status = 1;
             $notification->save();
         }
         return response()->json("ok");

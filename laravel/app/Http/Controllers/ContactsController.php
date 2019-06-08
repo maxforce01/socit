@@ -65,7 +65,7 @@ class ContactsController extends Controller
         broadcast(new NewMessage($message));
         $notification = new Notification;
         $notification -> user_id = $request->contact_id;
-        $notification->read = 0;
+        $notification->status = 0;
         $notification->from_user = Auth::user()->id;
         if(Auth::user()->isSubscribe(User::find($request->contact_id)))
             $notification ->text = " написал вам новое сообщение ";
